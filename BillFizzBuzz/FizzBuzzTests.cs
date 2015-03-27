@@ -8,6 +8,5 @@ namespace BillFizzBuzz
 {
     public class FizzBuzzTests
     {
-
     }
 }
