@@ -11,11 +11,12 @@ namespace FizzBuzzTests
     {
         [Fact]
 
+        private FizzBuzzEngine underTest = 
+        new FizzBuzzEngine();
 
         public void NumbersReturnNumbersAsString()
         {
             //arrange
-            var underTest = new FizzBuzzTests.FizzBuzzEngine();
 
             //act:
 
@@ -25,6 +26,32 @@ namespace FizzBuzzTests
 
             Assert.Equal("1", answer);
         }
+    [Fact]
+        public void NumbersDivisibleByThreeReturnFizz()
+        {
+            
 
+            string answer = underTest.DoTheThing(3);
+
+            Assert.Equal("Fizz", answer);
+
+        }
+        [Fact]
+        public void NumbersDivisbleByFive()
+    {
+
+        string answer = underTest.DoTheThing(5);
+        Assert.Equal("Buzz", answer);
+        }
+
+        [Fact]
+        public void NumbersDivisibleByThreeAndFive()
+        {
+            string answer = underTest.DoTheThing(3 && 5);
+
+            Assert.Equal("FizzBuzz", answer);
+
+        }
     }
 }
+
